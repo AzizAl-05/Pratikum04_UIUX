@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: burlywood;
+}
+
+header, footer {
+    background-color: lightseagreen;
+    padding: 20px;
+    text-align: center;
+    color: brown;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 10px;
+}
+
+aside {
+    flex: 0 0 250px;
+    background-color: magenta; 
+    color: black;   
+    padding: 10px;
+}
+
+article {
+    flex-grow: 1;
+    background-color: lightyellow;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.foto {
+    display: flex;
+    gap: 10px;
+}
+
+.foto img{
+    flex: 1;
+    height: auto;
+    background-color: lightsalmon;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+}
