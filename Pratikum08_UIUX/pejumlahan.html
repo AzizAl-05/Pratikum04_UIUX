@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Menghitung Jumlah Dua Bilangan</h1>
+    <label for="angka1">Bilangan Pertama : </label>
+    <input type="number" id="angka1">
+    <br>
+    <label for="angka2">Bilangan Kedua : </label>
+    <input type="number" id="angka2">
+    <br>
+    <span id="hasil"></span>
+    <br>
+    <button type="button" onclick="hitung()">Hitung</button>
+
+    <script>
+        function hitung() {
+            let Bilangan_Pertama = document.getElementById("angka1").value;
+            let Bilangan_Kedua = document.getElementById("angka2").value;
+
+            let angka1 = Number(Bilangan_Pertama);
+            let angka2 = Number(Bilangan_Kedua);
+        
+            let total = angka1 + angka2;
+            document.getElementById("hasil").innerHTML = "Hasil Pejumlahan :" + total;
+        }
+    </script>
+</body>
+</html>
