@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Picker</title>
+</head>
+<body>
+
+<h2>Pilih Gambar</h2>
+
+<select id="imageSelect" onchange="showImage()">
+    <option value="">-- Pilih Gambar --</option>
+    <option value="bison.jpeg">Bison</option>
+    <option value="gorila.jpeg">Gorila</option>
+    <option value="kucing.jpeg">Kucing</option>
+    <option value="burung.jpeg">Burung</option>
+    <option value="singa.jpeg">Singa</option>
+    <option value="gajah.jpeg">Gajah</option>
+</select>
+
+<br><br>
+
+<img id="displayImage" src="" alt="" width="300">
+
+<script>
+function showImage() {
+    const select = document.getElementById("imageSelect");
+    const fileName = select.value;
+    const img = document.getElementById("displayImage");
+
+    if (fileName === "") {
+        img.src = "";
+        return;
+    }
+
+    img.src = "img/" + fileName;
+    alert("Ini gambar " + fileName);
+}
+</script>
+
+</body>
+</html>
