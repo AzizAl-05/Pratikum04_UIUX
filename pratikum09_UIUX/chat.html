@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Fullscreen Chat</title>
+</head>
+<body style="margin:0; padding:0;">
+
+<div id="chatContainer" 
+     style="position: fixed; top:0; left:0; width:100%; height:100%; 
+            border:1px solid black; background:lightgrey;">
+
+    <div id="messages" 
+         style="height:85%; overflow-y:auto; padding:10px; border-bottom:1px solid black;">
+    </div>
+
+    <div style="height:15%; padding:10px;">
+        <input type="text" id="inputMessage" placeholder="Ketik pesan..." 
+               style="width:80%; height:30px;">
+        <button onclick="sendMessage()" style="height:34px;">Kirim</button>
+    </div>
+
+</div>
+
+<script>
+function sendMessage() {
+    const input = document.getElementById("inputMessage");
+    const messages = document.getElementById("messages");
+
+    const text = input.value.trim();
+    if (text === "") return;
+
+    const p = document.createElement("p");
+    p.innerText = text;
+
+    messages.appendChild(p);
+
+    messages.scrollTop = messages.scrollHeight;
+
+    input.value = "";
+    input.focus();
+}
+
+document.getElementById("inputMessage").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+});
+</script>
+
+</body>
+</html>
+
